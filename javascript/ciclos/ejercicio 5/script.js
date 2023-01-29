@@ -1,4 +1,5 @@
 let numero = parseFloat(prompt(`Ingrese un número`));
+let primo = true;
 if (numero <= 100){
     alert(`El número ingresado (${numero}) debe ser mayor a 100`);
     console.log(`El número ingresado (${numero}) debe ser mayor a 100`)
@@ -6,10 +7,14 @@ if (numero <= 100){
     for(let i= 101 ; i < numero; i++){
         for (let x = 2; x<= i/2; x++){
             if ( i % x == 0){
+                primo = false
                 break;
-            }else {
-                console.log(`${i} es un número primo`)
             }
-        }
+        }       
+    if(primo == false){
+        primo = true;
+    }else if(primo == true){
+        console.log(`${i} es número primo`)
+    }
     }
 }
