@@ -6,7 +6,7 @@ secuencias = int(secuencias)
 print(n)
 print(m)
 for secuencias in range(2,secuencias):
-    c = n+m; 
+    c = n+m; 3
     print(c)
     n=m
     m=c
