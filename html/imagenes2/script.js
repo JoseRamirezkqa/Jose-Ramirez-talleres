@@ -20,7 +20,7 @@ function cambio(){
         
     }else if(bandera==2){
         $('#dos').removeClass("w-1/12");
-        $("#dos").addClass("transform");
+        $("#dos").addClass("w-1/2");
 
     }else if(bandera == 3){
         $('#tres').removeClass("w-1/12");
