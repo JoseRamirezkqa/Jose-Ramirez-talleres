@@ -19,7 +19,8 @@ const pidgey = document.querySelector("#pidgey");
 const pidgeotto = document.querySelector("#pidgeotto");
 const pidgeot = document.querySelector("#pidgeot");
 const ratata = document.querySelector("#ratata");
-const raticate = document.querySelector("#raticate")
+const raticate = document.querySelector("#raticate");
+const busqueda = document.querySelector("#busqueda");
 newBox.addEventListener("click", function (e) { remplazar(); setTimeout(animation, 1000) });
 bulbasur.addEventListener("click", function (e) { i = 0; valor() })
 ivysaur.addEventListener("click", function (e) { i = 1; valor() })
@@ -40,8 +41,97 @@ pidgey.addEventListener("click", function (e) { i = 15; valor() })
 pidgeotto.addEventListener("click", function (e) { i = 16; valor() })
 pidgeot.addEventListener("click", function (e) { i = 17; valor() })
 ratata.addEventListener("click", function (e) { i = 18; valor() })
-raticate.addEventListener("click", function (e) { i = 19; valor() })
+raticate.addEventListener("click", function (e) { i = 19; valor() });
+function funtionBusqueda() {
+    let resultadoBusqueda = busqueda.value;
+    switch (resultadoBusqueda) {
+        case 'bulbasaur':
+            i = 0;
+            valor()
+            break;
+        case 'ivysaur':
+            i = 1
+            valor()
+            break;
+        case 'venusaur':
+            i = 2
+            valor()
+            break;
+        case 'charmander':
+            i = 3
+            valor()
+            break;
+        case 'charmeleon':
+            i = 4
+            valor()
+            break;
+        case 'charizard':
+            i = 5
+            valor()
+            break;
+        case 'squirtle':
+            i = 6
+            valor()
+            break;
+        case 'wartotle':
+            i = 7
+            valor()
+            break;
+        case 'blastoise':
+            i = 8
+            valor()
+            break;
+        case 'caterpie':
+            i = 9
+            valor()
+            break;
+        case 'metapod':
+            i = 10
+            valor()
+            break;
+        case 'butterfree':
+            i = 11
+            valor()
+            break;
+        case 'weedle':
+            i = 11
+            valor()
+            break;
+        case 'kakuna':
+            i = 12
+            valor()
+            break;
+        case 'breedril':
+            i = 13
+            valor()
+            break;
+        case 'pidgey':
+            i = 14
+            valor()
+            break;
+        case 'pidgeotto':
+            i = 15
+            valor()
+            break;
+        case 'pidgeot':
+            i = 16
+            valor()
+            break;
+        case 'ratata':
+            i = 17
+            valor();
+            break;
+        case 'raticate':
+            i = 18
+            valor()
+            break;
+        default:
+            alert('el nombre ingresado no está en la base de datos')
+            break;
+    }
 
+    busqueda.value = "";
+}
 let bandera = false
 function remplazar() {
     $("#cargando").removeClass('none');
