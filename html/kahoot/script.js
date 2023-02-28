@@ -81,6 +81,7 @@ function respuesta() {
     if(Respuesta == "Incorrecta"){
         document.body.classList ='bg-rose-400 duration-300'
         Incorrecta += 1
+        modal()
     }else{
         document.body.classList ="bg-lime-300 duration-300"
         Correcta += 1
@@ -89,4 +90,10 @@ function respuesta() {
     contador += 1
     setTimeout(cuadro(),5000)
 }
-
+// modal 
+function modal(){
+    const modalDiv = document.createElement("div");
+    modalDiv.classList = "relative t bg-lime-300 duration-300"
+    modalDiv.innerHTML = "Incorrecto"
+    document.body.appendChild(modalDiv)
+}
